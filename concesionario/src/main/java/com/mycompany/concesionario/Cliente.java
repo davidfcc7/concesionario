@@ -5,10 +5,32 @@
  */
 package com.mycompany.concesionario;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author David
  */
 public class Cliente {
+    private List<Persona> personas;
+    
+    public Cliente(){
+        personas = new ArrayList();
+    }
+
+    /**
+     * @return the personas
+     */
+    public List<Persona> getPersonas() {
+        return personas;
+    }
+
+    /**
+     * @param personas the personas to set
+     */
+    public void setPersonas(List<Persona> personas) {
+        this.personas = personas;
+    }
     
 }
