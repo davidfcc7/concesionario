@@ -5,6 +5,9 @@
  */
 package com.mycompany.concesionario;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author David
@@ -14,6 +17,7 @@ public class Vehiculo {
    private String marca;
    private String modelo;
    private String precio;
+   private List<Persona> personas;
    
    public Vehiculo(String color, String marca, String modelo, String precio){
        
@@ -21,8 +25,12 @@ public class Vehiculo {
        this.marca = marca;
        this.modelo = modelo;
        this.precio = precio;
-   
+       personas = new ArrayList();
    }
+
+    Vehiculo(int i, String mcLaren) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     /**
      * @return the color
@@ -78,6 +86,20 @@ public class Vehiculo {
      */
     public void setPrecio(String precio) {
         this.precio = precio;
+    }
+
+    /**
+     * @return the personas
+     */
+    public List<Persona> getPersonas() {
+        return personas;
+    }
+
+    /**
+     * @param personas the personas to set
+     */
+    public void setPersonas(List<Persona> personas) {
+        this.personas = personas;
     }
    
 }
